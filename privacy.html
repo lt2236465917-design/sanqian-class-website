@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>隐私政策 · 三千上课</title>
+  <meta name="description" content="了解三千上课的本地课表存储、DeepSeek 识别、系统权限、第三方服务以及个人信息管理方式。">
+  <link rel="canonical" href="https://sanqianshangke.top/privacy.html">
+  <link rel="icon" type="image/png" href="assets/personal-icon.png">
+  <style>
+    :root { --ink:#28345d; --muted:rgba(48,62,103,.68); --line:rgba(76,95,157,.16); --lime:#e2ff94; --sans:"DM Sans","PingFang SC","Helvetica Neue",sans-serif; --serif:"Songti SC","STSong",serif; }
+    * { box-sizing:border-box; }
+    html { background:#eaf0ff; scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); font-family:var(--sans); background:radial-gradient(circle at 8% 10%,rgba(255,255,255,.9),transparent 26rem),linear-gradient(135deg,#eff3ff 0%,#fff7fa 42%,#eefbf9 74%,#f8f4ff 100%); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; }
+    .top { position:sticky; top:16px; z-index:2; display:flex; align-items:center; justify-content:space-between; width:min(1080px,calc(100% - 32px)); min-height:58px; margin:16px auto 0; padding:0 18px; border:1px solid rgba(255,255,255,.86); border-radius:999px; background:rgba(255,255,255,.56); backdrop-filter:blur(22px) saturate(135%); box-shadow:0 12px 34px rgba(94,105,170,.16),inset 0 1px rgba(255,255,255,.92); }
+    .brand { display:flex; align-items:center; gap:9px; text-decoration:none; }
+    .brand img { width:30px; height:30px; padding:2px; border-radius:9px; background:#fff; object-fit:cover; }
+    .brand span { font-family:var(--serif); font-size:19px; }
+    .back { color:rgba(48,62,103,.68); font-size:13px; text-decoration:none; }
+    .back:hover { color:var(--ink); }
+    main { width:min(920px,calc(100% - 40px)); margin:0 auto; padding:110px 0 120px; }
+    .eyebrow { color:#6d6bd5; font-size:11px; letter-spacing:.2em; text-transform:uppercase; }
+    h1 { margin:22px 0 18px; font-family:var(--serif); font-size:clamp(52px,8vw,92px); font-weight:400; line-height:1; letter-spacing:-.05em; }
+    .lead { max-width:640px; color:var(--muted); font-size:15px; line-height:1.85; }
+    .notice { margin:44px 0 18px; padding:18px 20px; border:1px solid rgba(126,137,204,.28); border-radius:18px; color:rgba(48,62,103,.72); background:linear-gradient(135deg,rgba(226,255,148,.42),rgba(255,255,255,.62)); font-size:13px; line-height:1.8; box-shadow:inset 0 1px rgba(255,255,255,.86); }
+    .policy { display:grid; gap:12px; margin-top:18px; }
+    article { padding:22px 0; border-top:1px solid var(--line); }
+    article:last-child { border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 10px; color:var(--ink); font-size:19px; font-weight:500; }
+    p { margin:0; color:var(--muted); font-size:14px; line-height:1.9; }
+    footer { width:min(920px,calc(100% - 40px)); margin:0 auto; padding:0 0 40px; color:rgba(48,62,103,.46); font-size:11px; }
+    @media(max-width:560px) { .top { top:10px; min-height:52px; margin-top:10px; } main { padding-top:82px; } h1 { font-size:54px; } }
+  
+    :root { --muted:#566383; }
+    main { max-width:880px; padding-top:76px; }
+    h1 { font-size:clamp(42px,7vw,72px); line-height:1.15; letter-spacing:-.035em; }
+    .lead { max-width:760px; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px 20px; margin:20px 0; color:var(--muted); font-size:13px; line-height:1.8; }
+    .notice { margin-top:28px; color:var(--ink); font-size:14px; }
+    .notice p { color:var(--ink); }
+    .notice strong { color:var(--ink); }
+    .policy { gap:0; margin-top:28px; }
+    article { padding:30px 0; scroll-margin-top:110px; }
+    h2 { line-height:1.6; font-weight:600; }
+    h3 { margin:24px 0 8px; font-size:16px; line-height:1.7; font-weight:600; }
+    p + p, p + ul, p + ol { margin-top:12px; }
+    ul, ol { margin:12px 0; padding-left:22px; color:var(--muted); font-size:14px; line-height:1.9; }
+    li + li { margin-top:8px; }
+    strong { color:var(--ink); font-weight:600; }
+    p, li, td { overflow-wrap:anywhere; }
+    main a, footer a { text-decoration-thickness:1px; text-underline-offset:4px; }
+    a:hover { color:#4b46a8; }
+    a:focus-visible, .table-wrap:focus-visible { outline:3px solid #6d6bd5; outline-offset:5px; border-radius:4px; }
+    .toc { margin:28px 0; padding:20px 22px; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,.48); }
+    .toc h2 { font-size:15px; }
+    .toc ol { display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; margin-bottom:0; }
+    .toc li { margin:0; }
+    .table-wrap { overflow-x:auto; margin:18px 0; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.48); }
+    table { width:100%; min-width:650px; border-collapse:collapse; font-size:13px; line-height:1.85; color:var(--muted); }
+    th, td { padding:14px 16px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+    thead th { color:var(--ink); background:rgba(230,235,255,.72); font-weight:600; }
+    tbody th { color:var(--ink); min-width:140px; font-weight:500; }
+    tr:last-child td, tr:last-child th { border-bottom:0; }
+    .table-note { font-size:12px; }
+    .contact { padding:18px 20px; border-radius:14px; background:rgba(255,255,255,.6); }
+    .top nav { display:flex; gap:18px; }
+    footer { color:var(--muted); font-size:12px; line-height:1.9; }
+    .footer-nav { display:flex; flex-wrap:wrap; gap:18px; margin-bottom:12px; }
+    .skip-link { position:absolute; left:20px; top:-80px; padding:10px 14px; z-index:5; background:#fff; border-radius:8px; }
+    .skip-link:focus { top:12px; }
+    @media(max-width:560px) { main { padding-top:60px; } h1 { font-size:42px; } .top { padding-inline:14px; } .top nav { gap:12px; } .back { font-size:12px; } .toc ol { grid-template-columns:1fr; } article { padding:24px 0; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { .top, .toc, .skip-link, .footer-nav { display:none; } html, body { background:#fff; } main { width:100%; max-width:none; padding:0; } h1 { font-size:32px; } article { break-inside:auto; } h2, h3 { break-after:avoid; } .table-wrap { overflow:visible; } table { min-width:0; } footer { width:100%; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="top"><a class="brand" href="index.html#home"><img src="assets/personal-icon.png" alt=""><span>三千上课</span></a><nav aria-label="页面导航"><a class="back" href="terms.html">用户协议</a><a class="back" href="index.html#home">返回官网</a></nav></header>
+  <main id="main">
+    <span class="eyebrow">Privacy / 隐私政策</span>
+    <h1>隐私政策</h1>
+    <div class="meta"><span>更新日期：2026 年 10 月 14 日</span><span>生效日期：2026 年 10 月 14 日</span><span>版本：1.0</span></div>
+    <p class="lead">三千上课由个人开发者<strong>李滔</strong>开发、运营。本政策说明三千上课 App 及官网如何处理个人信息，以及你可以怎样管理这些信息。隐私与客服联系邮箱：<a href="mailto:2236465917@qq.com">2236465917@qq.com</a>。</p>
+    <div class="notice"><p><strong>请先了解：</strong>课表主要保存在你的手机上，我们没有用于接收、备份或远程查看用户课表的自建服务器，也不提供云端账号或课表云同步。<strong>你确认使用 AI 识别时，所选图片或课表文字会从手机发送到 DeepSeek；Android 版使用的 ML Kit 还涉及下文说明的诊断信息处理。</strong>上课提醒使用本机通知或系统日历，不使用我们的远程推送服务。</p></div>
+    <nav class="toc" aria-label="隐私政策目录"><h2>目录</h2><ol>
+      <li><a href="#scope">适用范围与基本原则</a></li><li><a href="#data">个人信息处理清单</a></li>
+      <li><a href="#ai">DeepSeek 识别与发送确认</a></li><li><a href="#permissions">系统权限与设备能力</a></li>
+      <li><a href="#third-parties">第三方服务与 SDK 清单</a></li><li><a href="#sharing">共享、转让与公开披露</a></li>
+      <li><a href="#retention">存储地点、期限与删除</a></li><li><a href="#security">信息安全</a></li>
+      <li><a href="#rights">你的权利与操作方式</a></li><li><a href="#children">未成年人保护</a></li>
+      <li><a href="#website">官网访问与外部链接</a></li><li><a href="#changes-contact">政策更新与联系我们</a></li>
+    </ol></nav>
+    <div class="policy">
+      <article id="scope"><h2>一、适用范围与基本原则</h2>
+        <p>本政策适用于三千上课当前提供的课表管理、图片及学校网页导入、分享、日历、提醒和桌面小组件等功能。不同系统提供的功能和权限入口可能不同。学校教务网站、DeepSeek、系统云备份及你自行选择的分享平台，还会按照各自的隐私规则处理其接收的信息。</p>
+        <p>查看、手动添加和编辑本机课表不要求注册三千上课账号，也不要求提供手机号、身份证或真实姓名。课程内容、学校名称、教师姓名、上课时间和地点，以及图片中出现的姓名、学号等，可能构成你或他人的个人信息。</p>
+        <p>我们只为实现你选择的功能、处理你提出的问题及履行法定义务处理必要信息，不出售个人信息，不提供个性化广告，不使用课表建立广告画像。<strong>阅读或同意本政策，不等于同意所有可选权限、AI 上传或其他依法需要单独同意的处理。</strong></p>
+      </article>
+      <article id="data"><h2>二、个人信息处理清单</h2>
+        <div class="table-wrap" role="region" aria-label="个人信息处理清单，可横向滚动" tabindex="0"><table><thead><tr><th scope="col">使用场景</th><th scope="col">处理的信息</th><th scope="col">目的与处理方式</th></tr></thead><tbody>
+          <tr><th scope="row">课表管理</th><td>课程名称、教师、课程编码、学期、周次、日期、时间、地点、备注及你设置的颜色和显示偏好。</td><td>在本机保存、展示、编辑和计算课程安排；不自动上传到开发者服务器。</td></tr>
+          <tr><th scope="row">图片选择与识别</th><td>你主动选择的课表图片、图片中的全部可见内容，以及复核时在本机提取的文字和位置信息。</td><td>选择和预览在本机进行；仅在确认 AI 请求后发送到 DeepSeek 进行识别或复核。背景图片用于本机显示，不因设置背景而发送到 DeepSeek。</td></tr>
+          <tr><th scope="row">学校账号导入</th><td>你输入的学校账号、密码、验证码，学校网页会话、课表单元格及导入结果。</td><td>通过内置浏览器直接访问所选学校的教务系统并登录、读取课表。选择记住账号时，账号密码保存于设备安全存储；网页课表文字仅在你确认 AI 辅助时发送到 DeepSeek。</td></tr>
+          <tr><th scope="row">DeepSeek 设置</th><td>你自行提供的 API Key。</td><td>存入本机安全存储，并在识别请求中发送给 DeepSeek 用于鉴权与计费，不发送给三千上课开发者。你可以随时删除。</td></tr>
+          <tr><th scope="row">系统日历与提醒</th><td>课程名称、时间、地点、提醒时间，以及定位和维护课程日程所需的日历列表、日程信息与标识。</td><td>经授权后创建、核对、更新或删除本 App 的课程日程，安排本地提醒。系统日历中的同步账户可能把日程同步到该账户的服务端。</td></tr>
+          <tr><th scope="row">小组件与系统展示</th><td>用于展示的课程摘要、时间、地点及显示设置。</td><td>向本设备的小组件、通知或系统展示区域提供课程信息；锁屏或桌面上的内容可能被能接触设备的人看到。</td></tr>
+          <tr><th scope="row">扫码、复制与分享</th><td>扫码画面、二维码中的课程数据、你主动粘贴的分享串，以及你选择导出的课程。</td><td>二维码识别、分享串编解码在本机完成；点击粘贴时读取剪贴板，点击复制时写入剪贴板，不持续监听剪贴板。你自行发送或展示后，接收方可以读取其中的课程信息。</td></tr>
+          <tr><th scope="row">第三方组件运行</th><td>Android ML Kit 的设备及应用信息、安装标识、性能和诊断信息。</td><td>供 Google 诊断、维护和改进识别组件；具体见第五条。它与课表是否保存在本机是不同的数据处理活动。</td></tr>
+          <tr><th scope="row">客服与隐私请求</th><td>你发来的邮箱地址、邮件内容、为说明问题主动提供的图片或其他材料，以及处理记录。</td><td>由开发者接收，用于答复、核验与处理请求。请先遮挡无关信息，不要发送学校密码、验证码或 API Key。</td></tr>
+        </tbody></table></div>
+        <p>除你主动联系我们、明确选择分享等情形外，开发者不通过 App 自动接收你的课表内容。学校和 DeepSeek 会接收各自服务所必需的信息，不能将“开发者没有课表服务器”理解为“没有任何第三方处理信息”。</p>
+      </article>
+      <article id="ai"><h2>三、DeepSeek 识别与发送确认</h2>
+        <p><strong>接收方：</strong>杭州深度求索人工智能基础技术研究有限公司及其关联公司提供的 DeepSeek 服务。App 直接通过 HTTPS 请求 <code>api.deepseek.com</code>，不经三千上课自建中转服务器。</p>
+        <ul>
+          <li><strong>图片识别：</strong>发送你选中的课表图片。图片中的姓名、学号、头像等不会因为“只识别课程”而自动被遮挡，请在选择前自行裁剪或遮挡不必要的信息。</li>
+          <li><strong>网页课表或课程整理：</strong>发送提取出的课表单元格文字，或你确认整理的课程名称、教师和课程安排。学校账号、密码、验证码、登录 Cookie 和网页会话凭据不作为识别内容发送。</li>
+          <li><strong>再次复核：</strong>经你再次确认，发送原图及本机文字识别结果，用于检查遗漏或错误。再次请求可能再次计费。</li>
+          <li><strong>鉴权与网络信息：</strong>请求使用你保存的 API Key。DeepSeek 因提供接口服务可获得请求内容、账号鉴权信息、网络 IP 和必要的调用日志；我们不额外向其附加通讯录、定位或广告标识符。</li>
+        </ul>
+        <p>你可以取消发送，继续使用手动录入等本地功能。识别结果先供你核对，再由你确认保存到本机；AI 结果可能不完整或不准确。取消已经发出的请求，不能撤回第三方已经接收的数据，也不保证取消已产生的费用。</p>
+        <p>DeepSeek 对所接收数据的保留、保护、删除及模型改进规则，适用其<a href="https://cdn.deepseek.com/policies/zh-CN/deepseek-privacy-policy.html" target="_blank" rel="noopener noreferrer">隐私政策</a>和<a href="https://cdn.deepseek.com/policies/zh-CN/deepseek-open-platform-terms-of-service.html" target="_blank" rel="noopener noreferrer">开放平台服务协议</a>。三千上课不承诺第三方“零留存”或“绝不用于训练”，也不能代替你删除第三方账户下的记录。你可通过其隐私政策提供的渠道提出请求，也可联系我们协助沟通。</p>
+      </article>
+      <article id="permissions"><h2>四、系统权限与设备能力</h2>
+        <p>下列权限用于对应功能，不代表 App 会读取权限覆盖的所有数据。你可在系统设置中撤回授权；拒绝可选权限不影响其他不依赖该权限的功能。</p>
+        <div class="table-wrap" role="region" aria-label="权限用途清单，可横向滚动" tabindex="0"><table><thead><tr><th scope="col">权限或能力</th><th scope="col">使用目的与触发场景</th><th scope="col">拒绝或关闭的影响</th></tr></thead><tbody>
+          <tr><th scope="row">相册 / 系统照片选择器</th><td>在你选择课表截图或背景图时，取得所选图片；具体授权形式随系统版本不同。</td><td>无法使用相应图片选择功能，可继续手动录入课表。</td></tr>
+          <tr><th scope="row">相机</th><td>在你打开扫码导入时识别课表二维码，不用于持续拍摄或人脸识别。</td><td>无法扫码，可使用可用的分享串粘贴或手动录入。</td></tr>
+          <tr><th scope="row">日历读写</th><td>在你选择日历导出或日历提醒时，查找可用日历、维护课程日程。读取范围用于核对本 App 创建的记录，不把其他日历内容上传给开发者或 DeepSeek。</td><td>不能写入或更新系统日历；App 内课表仍可使用。</td></tr>
+          <tr><th scope="row">通知</th><td>在你开启提醒时，由系统显示课程通知；不用于广告推送。</td><td>本地通知无法正常显示；系统日历提醒还受日历自身设置控制。</td></tr>
+          <tr><th scope="row">Android 精确闹钟、开机接收与振动</th><td>按课程时间安排本地提醒，在系统重启或时间变化后更新小组件和相关计划，并按系统设置振动。部分能力由系统自动管理。</td><td>限制相关能力可能使提醒或小组件更新延迟，具体取决于系统设置。</td></tr>
+          <tr><th scope="row">网络访问</th><td>用于你选择的 DeepSeek 识别、学校网页访问、外部链接，以及第五条说明的第三方组件通信。</td><td>联网功能无法使用，已保存课表和手动管理仍可用。</td></tr>
+        </tbody></table></div>
+        <p>App 不申请通讯录、短信、麦克风、精确位置或通话记录权限。权限名称及关闭路径以你使用的 iOS / Android 系统为准。</p>
+      </article>
+      <article id="third-parties"><h2>五、第三方服务与 SDK 清单</h2>
+        <p>以下列出与个人信息处理相关的主要第三方服务、组件及系统能力。第三方规则可通过所附链接查阅；App 内「关于 → 第三方开源许可证」还提供开源组件的许可信息。</p>
+        <div class="table-wrap" role="region" aria-label="第三方服务与 SDK 清单，可横向滚动" tabindex="0"><table><thead><tr><th scope="col">名称 / 提供方</th><th scope="col">用途与涉及信息</th><th scope="col">处理方式与规则</th></tr></thead><tbody>
+          <tr><th scope="row">DeepSeek API<br>杭州深度求索人工智能基础技术研究有限公司及其关联公司</th><td>经确认后的课表图片、课表文字、复核文字、API Key 及请求网络信息，用于 AI 识别、鉴权与计费。</td><td>手机直连接口。<a href="https://cdn.deepseek.com/policies/zh-CN/deepseek-privacy-policy.html" target="_blank" rel="noopener noreferrer">DeepSeek 隐私政策</a>。</td></tr>
+          <tr><th scope="row">Google ML Kit<br>Google LLC<br>Android 版</th><td>中文文字识别（16.0.1）用于你选择的图片复核；条码识别（17.3.0，经 mobile_scanner 使用）用于扫码。根据 Google 的公开说明，SDK 还处理设备型号、系统版本、应用包名与版本、安装标识、性能、接口配置、输入输出大小和错误等诊断信息。</td><td>识别输入和结果在本机处理，ML Kit 不将这些图片、文字及识别结果上传到 Google；SDK 自身的性能和使用指标可发送到 Google，初始化也属于其列明的事件类型。<a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">ML Kit 隐私说明</a>、<a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">Android 数据披露</a>、<a href="https://policies.google.com/privacy?hl=zh-CN" target="_blank" rel="noopener noreferrer">Google 隐私政策</a>。</td></tr>
+          <tr><th scope="row">学校教务网站<br>你选择的学校及其系统服务方</th><td>学校登录、身份验证和课表读取，涉及学校账号、密码、验证码、会话、访问日志及该网站展示的信息。</td><td>通过系统 WebView 访问学校页面，按所选学校页面公示的隐私规则处理。三千上课不代表学校提供服务。</td></tr>
+          <tr><th scope="row">Apple 系统框架<br>Apple Inc.<br>iOS 版</th><td>Vision 用于设备内文字及二维码识别；Keychain 保存凭据；日历、照片、通知及小组件框架提供对应系统功能。</td><td>课程展示及识别在设备内处理；你启用的系统账户、备份或日历同步另受系统设置控制。<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple 隐私政策</a>。</td></tr>
+          <tr><th scope="row">Flutter 功能组件<br>相应开源项目维护者</th><td><code>image_picker</code> 取得所选图片；<code>mobile_scanner</code> 扫码；<code>device_calendar</code> 访问日历；<code>sqflite</code>、<code>shared_preferences</code> 保存本地数据；<code>qr_flutter</code>、<code>zxing2</code>、<code>archive</code> 处理分享数据；<code>url_launcher</code> 打开你选择的外部链接。</td><td>这些组件用于本地处理或调用系统能力，不因此把课表发送给组件维护者。mobile_scanner 在 Android 上使用的 ML Kit 按上方规则处理；外部网站按各自政策处理访问。</td></tr>
+        </tbody></table></div>
+        <p>三千上课未接入广告投放、友盟统计、远程推送或自建崩溃上报服务。<strong>这一说明不排除上表中 ML Kit 的诊断通信，也不排除操作系统及应用商店按其规则处理诊断信息。</strong></p>
+      </article>
+      <article id="sharing"><h2>六、共享、转让与公开披露</h2>
+        <p>除为你提供已选择的功能而向本政策列明的接收方传输必要信息、你主动分享，或法律法规规定的情形外，我们不向其他组织或个人提供你的个人信息。需要新增接收方、改变目的或扩大信息范围时，会先说明变化，并依法取得相应同意。</p>
+        <p>分享二维码、分享串或导出内容会让接收者获得其中的课程信息。请只向可信对象分享；开发者不能远程撤回别人已保存、转发或截图的副本。</p>
+        <p>如将来发生运营主体变更并涉及个人信息转移，我们将告知接收方的名称和联系方式，要求其继续履行个人信息保护义务；改变处理目的或方式时依法重新取得同意。公开披露个人信息仅限于你明确授权或法律规定的必要情形。</p>
+      </article>
+      <article id="retention"><h2>七、存储地点、期限与删除</h2>
+        <ul>
+          <li><strong>课表与设置：</strong>保存在你的设备，直到你在 App 内删除、清除应用数据或按系统方式移除。系统备份、设备迁移、卸载后恢复或保留应用数据的行为受系统及账户设置控制，不能将卸载一概等同于所有副本彻底删除。</li>
+          <li><strong>API Key 与学校凭据：</strong>保存在 iOS Keychain 或 Android Keystore 保护的加密存储中，直到你主动删除或系统移除。iOS 钥匙串项目可能在卸载后仍保留，停用前建议在 App 内先删除 Key、清除已保存学校账号。</li>
+          <li><strong>选图与识别过程：</strong>图片用于预览、识别和复核，选择器或系统可能留下本地缓存；本 App 不建立供开发者访问的原图档案。原相册图片由你管理，删除课表不会自动删除原照片。</li>
+          <li><strong>日历、分享与备份：</strong>系统日历事件、已分享的内容、系统或你自行制作的备份独立于 App 数据。停用提醒、删除课表后，请检查相关日历和备份；卸载 App 不保证同步删除这些内容。</li>
+          <li><strong>客服材料：</strong>仅在处理你的请求、必要的后续沟通及争议解决所需期间内保留；处理目的完成且无其他必要保留理由时删除或匿名化。法律要求保留的部分仅在法定范围和期限内保存。</li>
+          <li><strong>第三方记录：</strong>DeepSeek、学校网站和 Google 对其接收的信息按各自规则保留。我们不控制其后台保留期限，也不承诺在你删除本机数据时同步删除第三方记录。</li>
+        </ul>
+        <p>本机数据的存储地点随你的设备而定。DeepSeek 在其政策中说明境内运营产生的个人信息存储于中国境内；Google 及其他第三方服务可能使用境外基础设施。<strong>我们不承诺所有第三方数据都只在中国境内处理。</strong>涉及依法须履行的跨境告知、单独同意或其他程序时，应在相应处理前完成，本政策不替代这些程序。</p>
+      </article>
+      <article id="security"><h2>八、信息安全</h2>
+        <p>我们利用应用沙盒、系统安全存储及 HTTPS 等能力保护信息，并在导入后提供核对、确认保存的步骤。API Key 在设置页保存后不回显原文；学校密码不作为普通课表字段或分享内容发送。安全保护不能完全消除设备丢失、恶意软件、越狱或系统漏洞的风险。</p>
+        <p>请设置设备锁屏、妥善保管密钥和分享内容，及时更新系统。怀疑 API Key 泄露时，请到 DeepSeek 开放平台撤销或更换；仅在 App 内删除不会撤销服务商已签发的 Key。</p>
+        <p>发生涉及我们所处理信息的安全事件时，我们将依法采取补救措施，并通过适当方式向受影响用户说明事件、影响、处置和建议；依法需要报告的，向主管部门报告。</p>
+      </article>
+      <article id="rights"><h2>九、你的权利与操作方式</h2>
+        <ul>
+          <li><strong>查阅、更正与复制：</strong>在 App 内查看和编辑课程，通过已有的分享、导出功能复制所需内容；也可就我们持有的客服资料提出查阅或更正请求。</li>
+          <li><strong>删除课表：</strong>在课表管理中删除相应课表或课程。开发者没有远程课表副本，不能远程读取、恢复或替你删除本机课表。</li>
+          <li><strong>撤回 AI 授权：</strong>在发送确认时选择取消；在「DeepSeek 设置」点击「删除 Key」以停止后续通过该 Key 的识别。撤回不影响此前基于有效授权已经完成的处理。</li>
+          <li><strong>清除学校账号：</strong>在学校账号导入页点击「清除已保存账号」。此操作不会注销学校账号，也不会自动删除已导入课表或学校服务器数据。</li>
+          <li><strong>关闭权限与提醒：</strong>在系统设置中管理相机、照片、日历、通知等权限，在 App 内关闭相关提醒。权限关闭后，相关更新或清理操作可能需要你在系统日历中手动完成。</li>
+          <li><strong>停止使用与注销：</strong>三千上课没有云端注册账号，因此没有三千上课账号注销流程。你可以删除本地内容、清除凭据并卸载；学校、DeepSeek 和应用商店账号需向各自服务方管理。</li>
+          <li><strong>解释、限制处理与投诉：</strong>可通过下方邮箱请求解释本政策、行使依法享有的权利或投诉；也可依法向有权机关反映问题。</li>
+        </ul>
+        <p>来信请描述具体请求、使用的平台及便于回复的联系方式。我们会在必要范围核验身份，不要求提供与请求无关的材料；通常在收到请求后 <strong>15 个工作日内</strong>答复。无法满足请求时，会说明理由及可采取的途径。我们不因你合理行使隐私权利收取费用。</p>
+      </article>
+      <article id="children"><h2>十、未成年人保护</h2>
+        <p>未满 18 周岁的用户，应在监护人指导下阅读本政策和用户协议，并在获得适当同意后使用涉及联网、分享或费用的功能。</p>
+        <p><strong>不满 14 周岁儿童的个人信息属于敏感个人信息。</strong>在未取得监护人单独同意并落实必要保护措施前，请不要通过 AI 识别、分享或客服提交儿童个人信息，也不要代他人上传此类内容。监护人发现相关信息被不当提交时，可联系下方邮箱；我们将依法核实、停止不适当的处理、删除我们持有的相关信息，并协助向实际接收方提出请求。</p>
+      </article>
+      <article id="website"><h2>十一、官网访问与外部链接</h2>
+        <p>官网地址为 <a href="https://sanqianshangke.top">https://sanqianshangke.top</a>，用于展示产品和提供政策、帮助及下载入口，不通过网页读取你手机 App 中的课表。访问网站会使网站托管服务接收 IP 地址、访问时间、浏览器请求头和所请求资源等网络信息，用于提供页面及必要的运行、安全保障。</p>
+        <p>官网首页使用 Google Fonts 字体及 Amazon CloudFront 上的图片资源；加载这些资源时，浏览器会直接向相应服务发送资源请求，涉及 IP 地址及必要请求信息，可能使用境外基础设施。相关处理见 <a href="https://policies.google.com/privacy?hl=zh-CN" target="_blank" rel="noopener noreferrer">Google 隐私政策</a>和 <a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener noreferrer">AWS 隐私声明</a>。这两项网页资源加载与 App 的课表上传是不同活动。</p>
+        <p>官网未设置登录账号或广告跟踪脚本。你点击应用商店、开源项目、社交平台或其他第三方链接后，该网站按自身政策处理访问；学校登录页面可能使用 Cookie 保持认证会话，Cookie 不作为课表文字提交给 DeepSeek。</p>
+      </article>
+      <article id="changes-contact"><h2>十二、政策更新与联系我们</h2>
+        <p>我们会在本页公布政策版本及更新、生效日期。涉及处理目的、信息范围、接收方或用户权利的重大变化，会以适当方式显著说明；需要重新或单独取得同意的，在相应处理前征求，不以你继续使用来替代依法需要的同意。</p>
+        <div class="contact"><p><strong>个人信息处理者 / 实际运营者：</strong>李滔<br><strong>产品：</strong>三千上课<br><strong>隐私与客服邮箱：</strong><a href="mailto:2236465917@qq.com">2236465917@qq.com</a><br><strong>官网：</strong><a href="https://sanqianshangke.top">https://sanqianshangke.top</a></p></div>
+        <p>与软件使用、AI 费用、提醒及许可相关的约定，请参阅<a href="terms.html">用户协议与服务条款</a>。</p>
+      </article>
+    </div>
+  </main>
+  <footer><nav class="footer-nav" aria-label="法律与信息"><a href="privacy.html">隐私政策</a><a href="terms.html">用户协议与服务条款</a><a href="mailto:2236465917@qq.com">联系我们</a></nav>© 2026 三千上课 · 李滔 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">京ICP备2026025115号-4</a></footer>
+</body>
+</html>
